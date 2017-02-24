@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'language_filter/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "language_filter"
+  spec.name          = "sensitive_text_filter"
   spec.version       = LanguageFilter::VERSION
-  spec.authors       = ["Chris Fritz"]
-  spec.email         = ["chrisvfritz@gmail.com"]
-  spec.description   = %q{LanguageFilter is a Ruby gem to detect and optionally filter various categories of language.}
-  spec.summary       = %q{LanguageFilter is a Ruby gem to detect and optionally filter various categories of language.}
-  spec.homepage      = "http://github.com/chrisvfritz/language_filter"
+  spec.authors       = ["C. Gerardo Kobluk"]
+  spec.email         = ["dblackbeer@gmail.com"]
+  spec.description   = %q{Sensitive Text Filter is a Ruby gem to detect and optionally filter sensitive data.}
+  spec.summary       = %q{Sensitive Text Filter is a Ruby gem to detect and optionally filter sensitive data.}
+  spec.homepage      = "http://github.com/gkobluk/sensitive_text_filter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
