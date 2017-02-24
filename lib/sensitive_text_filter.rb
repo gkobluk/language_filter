@@ -262,6 +262,7 @@ module SensitiveTextFilter
       when :nonconsonants then word.gsub(/[^bcdfghjklmnpqrstvwxyz]/i, '*')
       when :email then '*' * word.split("@")[0].size + "@" + word.split("@")[1]
       when :phone then "[hidden phone] "
+      when :address then "[hidden address] "
       when :url then word.gsub(/[^bcdfghjklmnpqrstvwxyz]/i, '*')
       when :default, :garbled then '$@!#%'
       else raise SensitiveTextFilter::UnknownReplacement.new("#{@replacement} is not a known replacement type.")
