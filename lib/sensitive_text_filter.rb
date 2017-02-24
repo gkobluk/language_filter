@@ -155,7 +155,7 @@ module SensitiveTextFilter
 
     def validate_replacement
       case @replacement
-      when :default, :garbled, :vowels, :stars, :nonconsonants, :email, :url, :phone
+      when :default, :garbled, :vowels, :stars, :nonconsonants, :email, :url, :phone, :address
       else raise SensitiveTextFilter::UnknownReplacement.new("This is not a known replacement type.")
       end
     end
