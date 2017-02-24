@@ -155,7 +155,7 @@ module SensitiveTextFilter
 
     def validate_replacement
       case @replacement
-      when :default, :garbled, :vowels, :stars, :nonconsonants, :email, :url
+      when :default, :garbled, :vowels, :stars, :nonconsonants, :email, :url, :phone
       else raise SensitiveTextFilter::UnknownReplacement.new("This is not a known replacement type.")
       end
     end
@@ -261,6 +261,7 @@ module SensitiveTextFilter
       when :stars  then '*' * word.size
       when :nonconsonants then word.gsub(/[^bcdfghjklmnpqrstvwxyz]/i, '*')
       when :email then '*' * word.split("@")[0].size + "@" + word.split("@")[1]
+      when :phone then "[hidden phone]"
       when :url then word.gsub(/[^bcdfghjklmnpqrstvwxyz]/i, '*')
       when :default, :garbled then '$@!#%'
       else raise SensitiveTextFilter::UnknownReplacement.new("#{@replacement} is not a known replacement type.")
