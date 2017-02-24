@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'language_filter/version'
+require 'sensitive_text_filter/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sensitive_text_filter"
-  spec.version       = LanguageFilter::VERSION
+  spec.version       = SensitiveTextFilter::VERSION
   spec.authors       = ["C. Gerardo Kobluk"]
   spec.email         = ["dblackbeer@gmail.com"]
   spec.description   = %q{Sensitive Text Filter is a Ruby gem to detect and optionally filter sensitive data.}
