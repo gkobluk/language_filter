@@ -16,7 +16,7 @@ $ bundle
 Need a new language filter? Here's a quick usage example:
 
 ``` ruby
-phone = LanguageFilter::Filter.new matchlist: :phone, replacement: :phone
+phone = SensitiveTextFilter::Filter.new matchlist: :phone, replacement: :phone
 
 # returns true if any content matched the filter's matchlist, else false
 phone.match?('Call us: 0880-333-2333 content.')
